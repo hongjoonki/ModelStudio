@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <% include head %>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <% include sidebar %>
+    
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <% include topbar %>
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Upload Model</h1>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Informations</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  
+
+                  <script type="text/javascript">
+                    var btn;
+                    function btn_on() {
+                      btn = document.getElementById('run_button');
+                      btn.disabled = false;
+                    }
+                   
+                    function btn_off() {
+                      btn = document.getElementById('run_button');
+                      btn.disabled = 'disabled';
+                    }
+                  </script>
+
+                  <form name="questionForm" method="post" action="/upload/models">
+                    <p>모델 분류</p>
+                    <div class="row">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" name="Category" value="fitting_simple" onclick="btn_on();"> 일반 피팅
+                      </label>&nbsp&nbsp&nbsp
+                      
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" name="Category" value="magazine" onclick="btn_on();"> 잡지, 화보
+                      </label>&nbsp&nbsp&nbsp
+                      
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="Category" value="fashion" onclick="btn_on();"> 패션
+                      </label>&nbsp&nbsp&nbsp
+                      
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="Category" value="wedding" onclick="btn_on();"> 웨딩
+                      </label>&nbsp&nbsp&nbsp
+                      
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="Category" value="cf" onclick="btn_on();"> 방송, CF
+                      </label>&nbsp&nbsp&nbsp
+                      
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="Category" value="beauty" onclick="btn_on();"> 뷰티
+                      </label>&nbsp&nbsp&nbsp
+                      
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="Category" value="homeshopping" onclick="btn_on();"> 홈쇼핑
+                      </label>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-5 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                          <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Basic Info</div><br>
+                                <div class="h10 mb-0 font-weight-bold text-gray-800">
+                                  <input type="text" name="Name" value="" placeholder="모델 이름 *" tabindex="1" style="width:120px;">
+                                  <input type="text" name="Age" value="" placeholder="나이 *" tabindex="1" style="width:120px;">
+                                  <input type="text" name="Intro" value="" placeholder="자기 소개" tabindex="1" style="width:120px;">
+                                  <input class="default" type="text" name="Height" value="" placeholder="신장(cm) *" tabindex="1" style="width:120px;">
+                                  <input class="default" type="text" name="Weight" value="" placeholder="체중(kg) *" tabindex="1" style="width:120px;">
+                                  <input class="default" type="text" name="Career" value="" placeholder="경력 (숫자로 입력)" tabindex="1" style="width:120px;">
+                                  <div class="search-select">
+                                    <span class="old">
+                                      <select id="gender" name="Gender" class="">
+                                        <option value="여">여자</option>
+                                        <option value="남">남자</option>
+                                      </select>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-7 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                          <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Size, Location</div><br>
+                                <div class="h10 mb-0 font-weight-bold text-gray-800">
+                                  <div class="row">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <div class="search-select" style="width:120px;">
+                                      <p> 상의 사이즈 </p>
+                                      <span class="old">
+                                        <select name="Top" class="">
+                                          <option value="44" selected="selected">44(S)</option>
+                                          <option value="55">55(M)</option>
+                                          <option value="66">66(L)</option>
+                                          <option value="88">88(XL)</option>
+                                          <option value="95">95(S)</option>
+                                          <option value="100">100(M)</option>
+                                          <option value="105">105(L)</option>
+                                          <option value="110">110(XL)</option>
+                                        </select>
+                                      </span>
+                                    </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <div class="search-select" style="width:120px;">
+                                      <p> 하의 사이즈 </p>
+                                      <span class="old">
+                                        <select name="Bottom" class="">
+                                          <option value="23" selected="selected">23(XS)</option>
+                                          <option value="24">24(S)</option>
+                                          <option value="25">25(M)</option>
+                                          <option value="26">26(L)</option>
+                                          <option value="27">27(XL)</option>
+                                          <option value="28">28(XL, XS)</option>
+                                          <option value="29">29(S)</option>
+                                          <option value="30">30(M)</option>
+                                          <option value="31">31(L)</option>
+                                          <option value="32">32(XL)</option>
+                                          <option value="33">33(XL)</option>
+                                          <option value="33">34(XL)</option>
+                                        </select>
+                                      </span>
+                                    </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <div>
+                                      <p>신발 사이즈</p>
+                                      <input class="default" type="text" name="Shoe" value="" placeholder="신발 사이즈" tabindex="1" style="width:120px;"><br><br>
+                                    </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <div>
+                                      <p>근무 가능 지역</p>
+                                      <label class="checkbox-inline">
+                                        <input type="checkbox" id="location1" name="Location" value="서울"> 서울
+                                      </label>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="run_button" disabled="disabled">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <% include footer %>
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/users/login">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

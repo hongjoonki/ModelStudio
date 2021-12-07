@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <% include head %>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <% include sidebar %>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <% include topbar %>
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- form tag -->
+          <form mothod='get'>
+          <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Find Models</h1>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row">
+
+              <!-- Earnings (Monthly) Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Category</div>
+                        
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="fitting">
+                          <label class="form-check-label" for="exampleRadios1">
+                            피팅모델 (전체)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="fitting_simple">
+                          <label class="form-check-label" for="exampleRadios2">
+                            피팅모델 > 일반 피팅 모델
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="magazine">
+                          <label class="form-check-label" for="exampleRadios3">
+                            피팅모델 > 잡지 & 화보
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="fashion">
+                          <label class="form-check-label" for="exampleRadios4">
+                            피팅모델 > 패션
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="wedding">
+                          <label class="form-check-label" for="exampleRadios5">
+                            피팅모델 > 웨딩
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="media">
+                          <label class="form-check-label" for="exampleRadios6">
+                            미디어모델 (전체)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios7" value="cf">
+                          <label class="form-check-label" for="exampleRadios7">
+                            미디어모델 > 방송 & CF
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios8" value="beauty">
+                          <label class="form-check-label" for="exampleRadios8">
+                            미디어모델 > 뷰티
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios9" value="homeshopping">
+                          <label class="form-check-label" for="exampleRadios9">
+                            미디어모델 > 홈쇼핑
+                          </label>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Earnings (Monthly) Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
+                        
+                        <div class="profile-box">
+                            <em class="default">나이(숫자)</em><br>
+                            <input class="default" type="text" name="MinimumAge" value="" style="width:120px;" placeholder="최소 나이(숫자)" tabindex="1">
+                            &nbsp;~ &nbsp;
+                            <input class="default" type="text" name="MaxAge" value="" style="width:120px;" placeholder="최대 나이(숫자)" tabindex="1">
+                        </div>
+
+                        <br><br>
+
+                        <div class="profile-box">
+                            <em class="default">성별</em>
+                            <div class="search-select" style="width:120px;">
+                              <span class="old">
+                                <select id="gender" name="Gender" class="">
+                                  <option value="0" selected="selected">성별 무관</option>
+                                        <option value="1">여자</option>
+                                        <option value="2">남자</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Earnings (Monthly) Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                        
+
+                        <div class="profile-box">
+                            <em class="default">신장(cm)</em><br>
+                            <input class="default" type="text" name="MinimumHeight" value="" placeholder="최소 신장(cm)" tabindex="1" style="width:120px;">
+                            &nbsp;~ &nbsp;
+                            <input class="default" type="text" name="MaxHeight" value="" placeholder="최대 신장(cm)" tabindex="1" style="width:120px;">
+                        </div>
+
+                        <br><br>
+
+                        <div class="profile-box">
+                            <em class="default">몸무게(kg)</em><br>
+                            <input class="default" type="text" name="MinimumWeight" value="" placeholder="최소 체중(kg)" tabindex="1" style="width:120px;">
+                            &nbsp;~ &nbsp;
+                            <input class="default" type="text" name="MaxWeight" value="" placeholder="최대 체중(kg)" tabindex="1" style="width:120px;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pending Requests Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
+                        
+                        <div class="profile-box">
+                            <em class="default">활동지역</em>
+                            <div class="search-select" style="width:120px;">
+                              <span class="old">
+                                <select id="sido_selector" name="SidoId" class="">
+                                  <option value="0">전체</option>
+                                      <option value="1">서울특별시</option>
+                                        <option value="2">경기도</option>
+                                    </select>
+                                </span>
+                          </div>
+                      </div>
+                      <br><br>
+
+                        <div class="profile-box below">
+                            <em class="default">경력</em>
+                            <div class="search-select" style="width:120px;">
+                              <span class="old">
+                                <select name="Career" class="">
+                                        <option value="0" selected="selected">경력무관</option>
+                                        <option value="1년">1년이하</option>
+                                        <option value="2년">1년이상</option>
+                                        <option value="3년">3년이상</option>
+                                        <option value="4년">5년이상</option>
+                                        <option value="5년">10년이상</option>
+                                    </select>
+                                </span>
+                          </div>
+                      </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          
+
+          <% if (state) { %>
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Output - 총 <%= model_list.length %>명의 모델이 검색되었습니다.</h6>
+                </div>
+                <div class="row">
+                  <% for (var i = 0; i < length_list; i++) { %>
+                  <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                      <img src="/images/models/<%= model_list[i]['model_num'] %>/<%= model_list[i]['name'] %>_profile.jpg" class="card-img-top">
+                      <div class="card-body">
+
+                        <div style="height:100px">
+                            <h5><%= JSON.stringify(model_list[i]['name']) %></h5>
+                            <p class="card-text" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 350px; height: 20px;">
+                              <%= model_list[i]['introduction'] %>
+                            </p>
+                            <a href="/keyword_search/<%= model_list[i]['keyword_one'] %>">
+                              <button type="button" class="btn btn-secondary btn-sm"><%= model_list[i]['keyword_one'] %></button>
+                            </a>
+                            <a href="/keyword_search/<%= model_list[i]['keyword_two'] %>">
+                              <button type="button" class="btn btn-secondary btn-sm"><%= model_list[i]['keyword_two'] %></button>
+                            </a>
+                            <a href="/keyword_search/<%= model_list[i]['keyword_three'] %>">
+                              <button type="button" class="btn btn-secondary btn-sm"><%= model_list[i]['keyword_three'] %></button>
+                            </a>
+                          </div><br>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            <a href="/model_detail/<%= model_list[i]['model_num'] %>"><button type="button" class="btn btn-primary">Show detail</button></a>
+                          </div>
+                          <small class="text-muted"><%= JSON.stringify(model_list[i]['like_num']) %></small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% } %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <% include footer %>
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/users/login">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

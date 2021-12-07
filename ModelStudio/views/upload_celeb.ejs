@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <% include head %>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <% include sidebar %>
+    
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <% include topbar %>
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Upload Celebrity</h1>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Informations</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  
+
+                  <script type="text/javascript">
+                    var btn;
+                    function btn_on() {
+                      btn = document.getElementById('run_button');
+                      btn.disabled = false;
+                    }
+                   
+                    function btn_off() {
+                      btn = document.getElementById('run_button');
+                      btn.disabled = 'disabled';
+                    }
+                  </script>
+
+                  <form name="questionForm" method="post" enctype="multipart/form-data" action="/upload/celeb">
+                    <div class="row">
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-5 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                          <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Basic Info</div><br>
+                                <div class="h10 mb-0 font-weight-bold text-gray-800">
+                                  <p>연예인 이름</p>
+                                  <div class="row">
+                                    &nbsp&nbsp&nbsp&nbsp<input class="default" type="text" name="Name" value="" placeholder="영어로 입력" tabindex="1" style="width:120px;">
+                                  </div><br>
+
+                                  <p>성별</p>
+                                  <div class="row">
+                                    &nbsp&nbsp&nbsp&nbsp
+                                    <label class="checkbox-inline">
+                                      <input type="checkbox" id="Sex" name="Sex" value="celeb_male" onclick="btn_on();"> 남성
+                                    </label>&nbsp&nbsp&nbsp
+                                    <label class="checkbox-inline">
+                                      <input type="checkbox" id="Sex" name="Sex" value="celeb_female" onclick="btn_on();"> 여성
+                                    </label>&nbsp&nbsp&nbsp
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-7 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                          <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">keyword, profile image</div><br>
+                                <div class="h10 mb-0 font-weight-bold text-gray-800">
+                                  <p>키워드</p>
+                                  <div class="row">
+                                    &nbsp&nbsp&nbsp&nbsp
+                                    <input class="default" type="text" name="keyword_one" value="" placeholder="keyword1" tabindex="1" style="width:120px;">
+                                    &nbsp&nbsp&nbsp
+                                    <input class="default" type="text" name="keyword_two" value="" placeholder="keyword2" tabindex="1" style="width:120px;">
+                                    &nbsp&nbsp&nbsp
+                                    <input class="default" type="text" name="keyword_three" value="" placeholder="keyword3" tabindex="1" style="width:120px;">
+                                  </div><br>
+                                  <p>프로필 사진</p>
+                                  <input type="file" name="imgFile">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="run_button" disabled="disabled">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <% include footer %>
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/users/login">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>
